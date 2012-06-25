@@ -13,5 +13,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "taobao"
   gem.require_paths = ["lib"]
+  
+  gem.add_dependency 'rack'
+  
   gem.version       = Taobao::VERSION
 end
