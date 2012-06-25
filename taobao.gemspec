@@ -4,8 +4,8 @@ require File.expand_path('../lib/taobao/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["liguang"]
   gem.email         = ["lg2046@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Taobao open sdk}
+  gem.summary       = %q{Taobao open sdk}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
