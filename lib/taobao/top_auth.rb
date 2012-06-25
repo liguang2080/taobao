@@ -10,7 +10,10 @@ module Taobao
       end
     end
 
-    def self.parseTopResponse(key, param, session, secret, sign)
+    def self.parseTopResponse(param, session, sign)
+      key = Taobao::Config.key
+      secret = Taobao::Config.secret
+      
       # 验证签名是否合法
       return nil unless verifySign(key, param, session, secret, sign)
 
