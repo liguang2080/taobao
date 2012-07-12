@@ -1,10 +1,10 @@
-require File.dirname(__FILE__) + '/taobao/version'
+require File.expand_path(File.dirname(__FILE__) + '/taobao/version')
 
-require File.dirname(__FILE__) + '/taobao/config'
-require File.dirname(__FILE__) + '/taobao/top_auth'
-require File.dirname(__FILE__) + '/taobao/client'
+require File.expand_path(File.dirname(__FILE__) + '/taobao/config')
+require File.expand_path(File.dirname(__FILE__) + '/taobao/top_auth')
+require File.expand_path(File.dirname(__FILE__) + '/taobao/client')
 
 
-if Rails
-  require File.dirname(__FILE__) + '/taobao/railtie'
+if defined? Rails
+  require File.expand_path(File.dirname(__FILE__) + '/taobao/railtie')
 end
