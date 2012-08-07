@@ -2,7 +2,7 @@ module Taobao
   class Client
 
     def initialize(session_key)
-      @api_url = Rails.env.development? ?  "http://gw.api.tbsandbox.com/router/rest" : "http://gw.api.taobao.com/router/rest"
+      @api_url = Rails.env.production? ? "http://gw.api.taobao.com/router/rest" : "http://gw.api.tbsandbox.com/router/rest"
       @api_key = Taobao::Config.key
       @api_secret = Taobao::Config.secret
       @session_key = session_key
