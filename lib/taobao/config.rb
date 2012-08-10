@@ -10,8 +10,10 @@ module Taobao
       def load_config
         filename = "#{Rails.root}/config/taobao.yml"
         config = YAML.load(File.open(filename))[Rails.env]
-        @app_key, @app_secret, @redirect_uri = config['app_key'], config['secret'], config['redirect_uri']
-        raise "Please configure your Tencentpay settings in #{filename}." unless @app_key && @app_secret && @redirect_uri
+        @app_key, @app_secret, @redirect_uri = config['app_key'], config['app_secret'], config['redirect_uri']
+        unless @app_key && @app_secret && @redirect_uri
+          puts "Please configure your Tencentpay settings in #{filename}."
+        end
       end
     end
   end
