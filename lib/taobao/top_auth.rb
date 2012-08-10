@@ -45,8 +45,8 @@ module Taobao
       return nil unless verifyTimeStamp(parse_hash)
 
       {
-        :visitor_id => params_hash["user_id"],
-        :visitor_nick => params_hash["nick"]
+        :visitor_id => parse_hash["user_id"],
+        :visitor_nick => parse_hash["nick"]
       }
       # parse_nested_query(Base64.decode64(param))
       # # 如果用户登陆,传的是visitor_id和visitor_nick;如果用户没有登陆则没有
